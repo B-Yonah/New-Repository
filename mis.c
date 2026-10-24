@@ -1,15 +1,19 @@
 #include <stdio.h>
 int main()
 {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-    
-    int count = 0;
-    while (num !=0){
-        num = num/10;
-        count = count + 1;
+    int age;
+    int count_old = 0;
+    for(int i = 1; i<=10; i++){
+        printf("Enter the ages: ");
+        scanf("%d", &age);
+        if(age>= 50 && age<=60){
+            count_old = count_old + 1;
+        }
+        else{
+            continue;
+        }
+
     }
-    printf("The count is: %d\n", count);
+    printf("The number of people between 50 and 60 are: %d", count_old);
     return 0;
 }
